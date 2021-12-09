@@ -86,8 +86,11 @@ class Worker
                 $response = $this->app->handle($request);
                 $this->extensionStack->afterHandle($this->app, $request, $response);
 
-                $rsp = new \Nyholm\Psr7\Response();
-                $rsp->getBody()->write($response->content());
+                $rsp = new \Nyholm\Psr7\Response(
+                    $response->getStatusCode(),
+                    $response->headers->all(),
+                    $response->getContent(),
+                    $response->getProtocolVersion());
                 $worker->respond($rsp);
 
                 $psrResponse = $responseBridge->createResponse($response);
