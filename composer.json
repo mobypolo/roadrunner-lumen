@@ -1,9 +1,9 @@
 {
-  "name": "mobypolo/roadrunner-lumen",
+  "name": "romannovo/roadrunner-lumen",
   "description": "RoadRunner <-> Lumen Integration Bridge",
   "type": "library",
   "license": "MIT",
-  "version": "1.0",
+  "version": "1.1",
   "keywords": [
     "lumen",
     "roadrunner",
@@ -12,12 +12,12 @@
   ],
   "authors": [
     {
-      "email": "to@mobypolo.com",
-      "name": "Moby Polo"
+      "email": "roman.novo.95@gmail.com",
+      "name": "Roman Novo"
     }
   ],
   "require": {
-    "laravel/lumen-framework": "~8.0",
+    "laravel/lumen-framework": "^8",
     "spiral/roadrunner": "^2.0.0",
     "spiral/goridge": "^3.0",
     "symfony/psr-http-message-bridge": "^1.2 || ^2.0",
