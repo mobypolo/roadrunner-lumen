@@ -86,10 +86,17 @@ class Worker
                 $response = $this->app->handle($request);
                 $this->extensionStack->afterHandle($this->app, $request, $response);
 
+                $content = null;
+                if($response->getContent()){
+                    $content = $response->getContent();
+                } else {
+                    $content = $response->getFile()->getContent();
+                }
+
                 $rsp = new \Nyholm\Psr7\Response(
                     $response->getStatusCode(),
                     $response->headers->all(),
-                    $response->getContent(),
+                    $content,
                     $response->getProtocolVersion());
                 $worker->respond($rsp);
 
