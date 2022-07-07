@@ -3,7 +3,7 @@
   "description": "RoadRunner <-> Lumen Integration Bridge",
   "type": "library",
   "license": "MIT",
-  "version": "1.1.2",
+  "version": "1.0.2",
   "keywords": [
     "lumen",
     "roadrunner",
